@@ -97,7 +97,8 @@ def refevent(event, payload, target, oauth_token):
 def getRepoData(repo, token):
     url = "https://api.github.com/repos/%s" % repo
     headers = {}
-    headers['Authorization']="token %s" % token
+    if token:
+        headers['Authorization']="token %s" % token
     githubListReq = requests.get(url, headers=headers)
     if githubListReq.status_code == 404:
         return [{"error": "Repo %s yields 404 error" % repo}]
@@ -105,7 +106,8 @@ def getRepoData(repo, token):
 
 def navigateGithubList(url, token, until, cumul = []):
     headers = {}
-    headers['Authorization']="token %s" % token
+    if token:
+        headers['Authorization']="token %s" % token
     githubListReq = requests.get(url, headers=headers)
     if githubListReq.status_code == 404:
         return [{"error": "Repo %s yields 404 error" % url.split("https://api.github.com/repos/")[1] }]

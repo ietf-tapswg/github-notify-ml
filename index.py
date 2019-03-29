@@ -263,7 +263,7 @@ def sendDigest(config, period="daily"):
                 from_addr = config.get("email", {}).get("from", config["EMAIL_FROM"])
                 parts, subject = mailFromTemplate(templates, events)
                 to = ml.split(",")
-                sendMail(config["SMTP_HOST"], parts, from_addr, "W3C Webmaster via GitHub API", to, subject)
+                sendMail(config["SMTP_HOST"], parts, from_addr, config['EMAIL_FROM_NAME'], to, subject)
 
 def serveRequest(config, postbody):
     request_method = os.environ.get('REQUEST_METHOD', "GET")

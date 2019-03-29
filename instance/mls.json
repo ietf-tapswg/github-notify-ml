@@ -1,6 +1,6 @@
 {
-  "ietf+tapstest@trammell.ch": {
-    "digest:thursday": [
+  "taps@ietf.org": {
+    "digest:friday": [
       {
 	"topic": "TAPS GitHub Activity Digest",
         "repos": ["ietf-tapswg/api-drafts"]

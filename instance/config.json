@@ -1,6 +1,7 @@
 {
 "SMTP_HOST":"localhost",
 "EMAIL_FROM":"tapsbot@magpie.corvid.ch",
+"EMAIL_FROM_NAME":"TAPS WG status robot",
 "TEMPLATES_DIR":"templates",
 "GH_OAUTH_TOKEN":"",
 "mls":"instance/mls.json"
